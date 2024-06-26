@@ -7,7 +7,7 @@ use App\Repository\Filters\TodoFilter;
 use App\Repository\TodoRepository;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse as Response;
 
 class TodoController extends Controller
 {
