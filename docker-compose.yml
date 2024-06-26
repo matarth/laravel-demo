@@ -10,6 +10,10 @@ services:
         volumes:
             - db:/var/lib/mysql
             - ./code/:/code
+        env_file:
+            -   ./code/.env
+        healthcheck:
+            test: "exit 0"
 
     nginx:
         container_name: todo_nginx
@@ -41,6 +45,13 @@ services:
             - db
         working_dir: /code
         user: "${UID}:${GID}"
+        env_file:
+            - ./code/.env
+        environment:
+            MARIADB_URL: db
+        command: > 
+            sh -c "composer install; php artisan migrate:install; php artisan migrate; php artisan db:seed; php-fpm"
+
 
 volumes:
     db:
