@@ -39,7 +39,7 @@ class TodoController extends Controller
             $todoItem = null;
         }
 
-        return view('pages/todoEdit', ['item' => $todoItem, 'actionRoute' => 'todo.add']);
+        return view('pages/todoEdit', ['item' => $todoItem, 'actionRoute' => $id ? 'todo.edit' : 'todo.create']);
     }
 
     public function create(Request $request): Response
