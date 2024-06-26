@@ -1,3 +1,7 @@
 ### Instalation
 
-docker compose build --build-arg UID=$(id -u) --build-arg GID=$(id -g)
+`cp .env.dist .env`
+
+`docker compose build --build-arg UID=$(id -u) --build-arg GID=$(id -g)`
+
+`docker exe`
