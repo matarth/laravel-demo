@@ -19,7 +19,7 @@ class TodoFactory extends Factory
     {
         return [
             'done' => false,
-			'user_id' => User::factory(),
+            'user_id' => User::factory(),
         ];
     }
 }

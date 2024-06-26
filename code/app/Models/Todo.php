@@ -4,29 +4,40 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Todo extends Model
 {
-	use HasFactory;
+    use HasFactory;
 
-	protected $table = 'todo';
+	/**
+	 * @var string
+	 */
+    protected $table = 'todo';
 
-	protected $fillable = [
-		'created_at',
-		'done',
-		'name',
-		'comment',
-		'user_id',
-	];
+	/**
+	 * @var array<int,string>
+	 */
+    protected $fillable = [
+        'created_at',
+        'done',
+        'name',
+        'comment',
+        'user_id',
+    ];
 
-	protected $casts = [
-		'created_at' => 'datetime',
-		'updated_at' => 'datetime',
-		'done' => 'boolean',
-	];
+	/**
+	 * @var string[]
+	 */
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'done' => 'boolean',
+    ];
 
-	public function user()
-	{
-		return $this->belongsTo(User::class);
-	}
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

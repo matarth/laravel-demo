@@ -5,8 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/code/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/code/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/code/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/code/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/code/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/code/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
@@ -118,6 +116,22 @@
       <excludeFolder url="file://$MODULE_DIR$/code/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/code/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/code/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/clue/ndjson-react" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/evenement/evenement" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/fidry/cpu-core-counter" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/friendsofphp/php-cs-fixer" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/phpstan/phpstan" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/child-process" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/dns" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/event-loop" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/socket" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/react/stream" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/code/vendor/symfony/stopwatch" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -5,42 +5,46 @@ namespace App\Repository;
 use App\Models\Todo;
 use App\Models\User;
 use App\Repository\Filters\TodoFilter;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 
 class TodoRepository
 {
-	protected function getQueryBuilder(TodoFilter $filter)
-	{
-		$qb = Todo::select();
+    protected function getQueryBuilder(TodoFilter $filter): Builder
+    {
+        $qb = Todo::select('*');
 
-		if($filter->getDone() !== null){
-			$qb->where('done', $filter->getDone());
-		}
+        if($filter->getDone() !== null) {
+            $qb->where('done', $filter->getDone());
+        }
 
-		if($filter->getId() !== null){
-			$qb->where('id', $filter->getId());
-		}
+        if($filter->getId() !== null) {
+            $qb->where('id', $filter->getId());
+        }
 
-		return $qb;
-	}
+        return $qb;
+    }
 
-	public function getSingleResult(TodoFilter $filter): Todo {
-		$qb = $this->getQueryBuilder($filter);
-		$qb->limit(1);
-		return $qb->get()->first();
-	}
+    public function getSingleResult(TodoFilter $filter): Todo
+    {
+        $qb = $this->getQueryBuilder($filter);
+        $qb->limit(1);
+        return $qb->get()->first();
+    }
 
-	/**
-	 * @return Collection<Todo>
-	 */
-	public function getFilteredResults(TodoFilter $filter): Collection {
-		$qb = $this->getQueryBuilder($filter);
-		return $qb->get();
-	}
+    /**
+     * @return Collection<int, Todo>
+     */
+    public function getFilteredResults(TodoFilter $filter): Collection
+    {
+        $qb = $this->getQueryBuilder($filter);
+        return $qb->get();
+    }
 
-	public function getCount(TodoFilter $filter): int {
-		$qb = $this->getQueryBuilder($filter);
-		return $qb->count();
-	}
+    public function getCount(TodoFilter $filter): int
+    {
+        $qb = $this->getQueryBuilder($filter);
+        return $qb->count();
+    }
 
 }

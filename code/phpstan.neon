@@ -1,0 +1,15 @@
+includes:
+
+parameters:
+	level: 8
+	fileExtensions:
+		- php
+		- phpt
+	paths:
+		- ./app
+		- ./bootstrap
+		- ./config
+	tmpDir: ../storage/phpstan
+	treatPhpDocTypesAsCertain: false
+	ignoreErrors:
+	    - message: "#expects non-empty-string.* given#"
